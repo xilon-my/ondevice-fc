@@ -28,6 +28,11 @@ reward more than doubles exact accuracy (25% → 51%, mean reward 0.395 →
 RL step sharpens function/argument selection and output format. Raw eval JSONs
 in [`results/`](results/README.md).
 
+**Download the trained adapters:** [v1.0 Release](https://github.com/xilon-my/ondevice-fc/releases/tag/v1.0)
+(`fc_sft_droidcall.tgz`, `fc_fc_rl.tgz`, `fc_fc_rl2.tgz`). Each contains
+`adapter_model.safetensors` + `adapter_config.json` + tokenizer files, to be
+loaded on Qwen2.5-3B-Instruct via `PeftModel.from_pretrained`.
+
 ## Method
 
 1. **Data** — DroidCall (Android intent / function calling). `cr/build_fc_sft.py`
