@@ -1,0 +1,11 @@
+# Runtime verified on: Python 3.12, CUDA 12.8, 1× RTX 5090 (32 GB, Blackwell sm_120)
+# The function-calling pipeline (cr/fc_reward.py, cr/train_fc_sft.py, cr/train_fc_grpo.py,
+# cr/eval_fc.py) was trained/evaluated with the pins below. No vLLM needed — GRPO rollout
+# uses TRL's plain in-process generation.
+torch==2.7.0
+transformers==5.15
+trl==1.10
+peft
+datasets
+accelerate
+sentencepiece
